@@ -1,0 +1,58 @@
+@keyframes button-animation {
+    from{
+        background-color: blue;
+        color: white;
+    }
+    to{
+        color: black;
+        background-color: greenyellow;
+    }
+}
+
+#canvas{
+    background-image: url("https://tesolatrennertnyc.files.wordpress.com/2012/07/tic-tac-toe-board.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#button{
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    top: 500px;
+    right: 150px;
+    font-size:25px;
+}
+
+#button:hover{
+    outline: none;
+    border-style:none;
+    background-color: greenyellow;
+    color: black;
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    top: 500px;
+    right: 150px;
+    font-size:25px;
+    animation-name: button-animation;
+    animation-duration: 2s;
+}
+
+#x_score{
+    position: absolute;
+    top: 30px;
+    left: 1400px;
+}
+
+#o_score{
+    position: absolute;
+    top: 70px;
+    left: 1400px;
+}
+
+#tie_score{
+    position: absolute;
+    top: 110px;
+    left: 1380px;
+}
