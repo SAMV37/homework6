@@ -1,12 +1,12 @@
 //Exercise number 1
 
 function printDiamond(height, a){
-	const length = a.length;
-	var space = '';
+    const length = a.length;
+    var space = '';
 
-	for(var i = 0; i < length; i++){
-		space += ' ';
-	}
+    for(var i = 0; i < length; i++){
+        space += ' ';
+    }
 
     if(height%2 === 0){
         height++;
@@ -56,12 +56,12 @@ function printDiamond(height, a){
 //Exercise number 2
 
 function printDiamond_with_for(height, a){
-	const length = a.length;
-	var space = '';
+    const length = a.length;
+    var space = '';
 
-	for(var i = 0; i < length; i++){
-		space += ' ';
-	}
+    for(var i = 0; i < length; i++){
+        space += ' ';
+    }
 
     if(height%2 === 0){
         height++;
@@ -116,7 +116,7 @@ const tie_score = document.getElementById('tie_score');
 const reload_button = document.getElementById('button');
 
 reload_button.onclick = function(){
-  reloader();
+    reloader();
 };
 const board = [
     [' ', ' ', ' '],
@@ -129,9 +129,9 @@ function nextMove(board, isX){
     function returner(){
         let x = Math.floor(Math.random() * 3);
         let y = Math.floor(Math.random() * 3);
-        if(board[x][y] === ' '){
-            returnNum =  [x, y];
-        }else {
+        if (board[x][y] === ' ') {
+            returnNum = [x, y];
+        } else {
             returner();
         }
     }
@@ -209,7 +209,7 @@ function findWins(board){
 
 
     if(winner === undefined){
-    	return -1;
+        return -1;
     }
 
 
@@ -231,89 +231,90 @@ O.src="https://upload.wikimedia.org/wikipedia/commons/2/2d/O-Jolle_insigna.png";
 const back = new Image().src="https://tesolatrennertnyc.files.wordpress.com/2012/07/tic-tac-toe-board.gif";
 let done = false;
 
-canvas.addEventListener('click', function(e) {
-        if(done === false) {
-            if (Math.floor(e.offsetY / 300) === 0) {
-                if (Math.floor(e.offsetX / 300) === 0) {
-                    //1
-                    if (board[0][0] === ' ') {
-                        board[0][0] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                } else if (Math.floor(e.offsetX / 300) === 1) {
-                    //2
-                    if (board[1][0] === ' ') {
-                        board[1][0] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                } else if (Math.floor(e.offsetX / 300) === 2) {
-                    //3
-                    if (board[2][0] === ' ') {
-                        board[2][0] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                }
-            } else if (Math.floor(e.offsetY / 300) === 1) {
-                if (Math.floor(e.offsetX / 300) === 0) {
-                    //4
-                    if (board[0][1] === ' ') {
-                        board[0][1] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                } else if (Math.floor(e.offsetX / 300) === 1) {
-                    //5
-                    if (board[1][1] === ' ') {
-                        board[1][1] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                } else if (Math.floor(e.offsetX / 300) === 2) {
-                    //6
-                    if (board[2][1] === ' ') {
-                        board[2][1] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                }
-            } else if (Math.floor(e.offsetY / 300) === 2) {
-                if (Math.floor(e.offsetX / 300) === 0) {
-                    //7
-                    if (board[0][2] === ' ') {
-                        board[0][2] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                } else if (Math.floor(e.offsetX / 300) === 1) {
-                    //8
-                    if (board[1][2] === ' ') {
-                        board[1][2] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                } else if (Math.floor(e.offsetX / 300) === 2) {
-                    //9
-                    if (board[2][2] === ' ') {
-                        board[2][2] = 'X';
-                        board_drawer(board);
-                        win_checker();
-                        setTimeout("o_play()", 200);
-                    }
-                }
-            }
-        }
-}, false);
+//Uncomment this for 1 player
+// canvas.addEventListener('click', function(e) {
+//         if(done === false) {
+//             if (Math.floor(e.offsetY / 300) === 0) {
+//                 if (Math.floor(e.offsetX / 300) === 0) {
+//                     //1
+//                     if (board[0][0] === ' ') {
+//                         board[0][0] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 } else if (Math.floor(e.offsetX / 300) === 1) {
+//                     //2
+//                     if (board[1][0] === ' ') {
+//                         board[1][0] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 } else if (Math.floor(e.offsetX / 300) === 2) {
+//                     //3
+//                     if (board[2][0] === ' ') {
+//                         board[2][0] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 }
+//             } else if (Math.floor(e.offsetY / 300) === 1) {
+//                 if (Math.floor(e.offsetX / 300) === 0) {
+//                     //4
+//                     if (board[0][1] === ' ') {
+//                         board[0][1] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 } else if (Math.floor(e.offsetX / 300) === 1) {
+//                     //5
+//                     if (board[1][1] === ' ') {
+//                         board[1][1] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 } else if (Math.floor(e.offsetX / 300) === 2) {
+//                     //6
+//                     if (board[2][1] === ' ') {
+//                         board[2][1] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 }
+//             } else if (Math.floor(e.offsetY / 300) === 2) {
+//                 if (Math.floor(e.offsetX / 300) === 0) {
+//                     //7
+//                     if (board[0][2] === ' ') {
+//                         board[0][2] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 } else if (Math.floor(e.offsetX / 300) === 1) {
+//                     //8
+//                     if (board[1][2] === ' ') {
+//                         board[1][2] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 } else if (Math.floor(e.offsetX / 300) === 2) {
+//                     //9
+//                     if (board[2][2] === ' ') {
+//                         board[2][2] = 'X';
+//                         board_drawer(board);
+//                         win_checker();
+//                         setTimeout("o_play()", 200);
+//                     }
+//                 }
+//             }
+//         }
+// }, false);
 
 
 function board_drawer(board){
@@ -366,8 +367,23 @@ function reloader(){
     }
     done = false;
     board_drawer(board);
+    mozg();
 }
 
+let isX = false;
+
+//Uncomment this for 0 player
+// function mozg(){
+//     if(findWins(board) === -1){
+//         makeMove(board, nextMove(board, isX), !isX);
+//         board_drawer(board);
+//         win_checker();
+//         isX = !isX;
+//         setTimeout("mozg()", 500);
+//     }
+// }
+//
+// mozg();
 
 
 
